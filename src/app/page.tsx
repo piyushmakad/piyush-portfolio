@@ -10,7 +10,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Piyush Makad",
-    jobTitle: "Backend Engineer",
+    jobTitle: "Full Stack AI Engineer",
     email: "mailto:piyush.makad16@gmail.com",
     url: "https://portfolio-piyush-steel.vercel.app/",
     sameAs: [
@@ -18,7 +18,7 @@ export default function Home() {
       "https://www.linkedin.com/in/piyush-makad-758834244/",
       "https://www.upwork.com/freelancers/~0130e9a68c27cb6d66",
     ],
-    knowsAbout: ["Node.js", "TypeScript", "Go", "PostgreSQL", "MongoDB", "Redis", "Kafka", "RabbitMQ", "Elasticsearch", "Kubernetes", "Distributed systems"],
+    knowsAbout: ["LLM applications", "MCP", "OpenAI Responses API", "React", "Node.js", "TypeScript", "Go", "PostgreSQL", "MongoDB", "Redis", "Kafka", "Elasticsearch", "Distributed systems"],
   };
 
   return (
@@ -51,13 +51,13 @@ export default function Home() {
             priority
           />
           <div className="hero-identity">
-            <p className="hero-name">Piyush Makad<span>Backend Engineer · India / Remote</span></p>
-            <p className="focus-line">Messaging infrastructure <i>·</i> Distributed systems <i>·</i> Data performance</p>
+            <p className="hero-name">Piyush Makad<span>Full Stack AI Engineer · India / Remote</span></p>
+            <p className="focus-line">Production LLM products <i>·</i> React to backend <i>·</i> Distributed systems</p>
           </div>
         </div>
-        <h1 id="hero-title">I build backend systems that stay <em>fast and reliable</em> as products grow.</h1>
+        <h1 id="hero-title">I ship AI products <em>end to end,</em> backed by systems built to scale.</h1>
         <div className="hero-bottom">
-          <p className="hero-copy">I design APIs, event-driven services, and data access for high-volume products—from customer messaging at ChatDaddy to real-time trading systems at CineStox.</p>
+          <p className="hero-copy">At ChatDaddy, I built customer-facing LLM workflows, a 120-tool MCP platform, and AI-assisted support systems. I own the React experience, model and tool integration, backend architecture, and production reliability.</p>
           <div className="hero-actions">
             <a className="button button-dark" href="#work">Explore selected work <Arrow /></a>
             <a className="text-link" href="/Piyush-Makad-Resume.pdf" target="_blank">Download résumé <Arrow /></a>
@@ -67,19 +67,22 @@ export default function Home() {
 
       <section className="proof-strip" aria-label="Selected engineering results">
         <div className="shell proof-grid">
+          <div><strong>120</strong><span>MCP tools shipped</span></div>
+          <div><strong>300+</strong><span>teams using paid Daily AI Reports</span></div>
+          <div><strong>500K+</strong><span>messages processed daily</span></div>
           <div><strong>1 TB</strong><span>message collection partitioned</span></div>
           <div><strong>290K+</strong><span>API operations removed daily</span></div>
-          <div><strong>5×</strong><span>faster contact lookups</span></div>
+          <div><strong>&lt;150ms</strong><span>contact lookup latency</span></div>
+          <div><strong>10K</strong><span>order-book ops/s, MVP estimate</span></div>
           <div><strong>&lt;1%</strong><span>decryption failures on WhatsApp retries</span></div>
-          <div><strong>200 GB+</strong><span>retained WAL traced in a production outage</span></div>
         </div>
       </section>
 
       <section id="work" className="section shell">
         <div className="section-heading">
           <p className="eyebrow">Career & selected work</p>
-          <h2>Backend problems I owned in production.</h2>
-          <p>Data scale, API latency, messaging reliability, and real-time systems—explained through decisions and measurable outcomes.</p>
+          <h2>AI products shipped. Backend systems owned.</h2>
+          <p>Production LLM features, tool orchestration, support automation, and the high-volume infrastructure behind them.</p>
         </div>
         <div className="work-list">
           {featuredWork.map((item, index) => (
@@ -106,13 +109,13 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading light-heading">
             <p className="eyebrow">Experience</p>
-            <h2>Owning the backend from design through incidents.</h2>
+            <h2>Full-stack product delivery with deep backend ownership.</h2>
           </div>
           <div className="timeline">
             <article>
               <div className="timeline-meta"><span>2025 — Present</span><span>Remote</span></div>
               <div><h3>Full-Stack Developer</h3><p className="company">ChatDaddy</p></div>
-              <p>Built high-volume messaging services, optimized contact access, and partitioned message data across MongoDB and Elasticsearch. Reduced decryption failures on retried WhatsApp messages and traced a PostgreSQL disk-full outage to an orphaned replication slot retaining over 200 GB of WAL.</p>
+              <p>Shipped a 120-tool MCP platform, AI prompt-to-flow generation, paid Daily AI Reports, and WhatsApp Business insights. Built React interfaces and model-backed services while optimizing high-volume messaging, data access, and incident response.</p>
             </article>
             <article>
               <div className="timeline-meta"><span>2024 — 2025</span><span>India</span></div>
@@ -131,14 +134,14 @@ export default function Home() {
       <section className="section shell product-lab" aria-labelledby="lab-title">
         <div className="section-heading">
           <p className="eyebrow">Independent engineering</p>
-          <h2 id="lab-title">Building the failure paths, not just the happy path.</h2>
-          <p>PulseFlow is my public Go systems project. Smaller product builds show how I connect backend services to usable interfaces.</p>
+          <h2 id="lab-title">Products and systems I build independently.</h2>
+          <p>AI products with working interfaces, plus PulseFlow: a completed Go system for durable event ingestion and notification delivery.</p>
         </div>
         <div className="lab-grid">
           <a href="https://github.com/piyushmakad/Pulseflow" target="_blank" rel="noreferrer" className="lab-card lab-primary">
-            <div><span className="lab-index">01</span><span className="wip-pill">Building</span></div>
+            <div><span className="lab-index">01</span><span className="live-pill">Completed</span></div>
             <h3>PulseFlow</h3>
-            <p>Multi-tenant event ingestion and notification delivery in Go, with a PostgreSQL outbox, Kafka, idempotency, bounded workers, and durable retries.</p>
+            <p>Built a multi-tenant Go event and notification system with authenticated APIs, a PostgreSQL outbox, Kafka, idempotency, bounded workers, and durable retries.</p>
             <span className="lab-link">View repository <Arrow /></span>
           </a>
           <a href="https://ai-github-app.onrender.com/" target="_blank" rel="noreferrer" className="lab-card">
@@ -161,8 +164,8 @@ export default function Home() {
       <section id="services" className="section shell services-layout">
         <div className="section-heading sticky-heading">
           <p className="eyebrow">How I can help</p>
-          <h2>Backend engineering for real product constraints.</h2>
-          <p>Architecture, performance, and reliability for teams operating systems that customers depend on.</p>
+          <h2>From AI idea to production product.</h2>
+          <p>Model integration, React interfaces, backend services, and reliable operation after launch.</p>
         </div>
         <div className="service-list">
           {services.map((service, index) => (
@@ -177,7 +180,7 @@ export default function Home() {
             <p className="eyebrow">Technical toolkit</p>
             <h2 id="stack-title">The tools behind the systems.</h2>
           </div>
-          <p>I go deepest in Node.js, TypeScript, Go, messaging systems, databases, and production debugging. React and AI integrations help me carry backend work into the product.</p>
+          <p>I build across React, TypeScript, LLM workflows, and MCP, with deep experience in Node.js, event-driven services, databases, and production debugging.</p>
         </div>
         <div className="skills-grid">
           {skillGroups.map((group, index) => (
@@ -194,7 +197,7 @@ export default function Home() {
           <p className="eyebrow">Let&apos;s build something</p>
           <div>
             <h2>Have a hard engineering problem?</h2>
-            <p className="contact-copy">I&apos;m open to backend and platform engineering roles, especially teams working on distributed systems, high-volume APIs, and data-intensive products.</p>
+            <p className="contact-copy">I&apos;m open to Full Stack AI Engineer roles where I can ship useful AI products and own the backend systems that make them dependable.</p>
           </div>
           <div className="contact-actions">
             <a className="button button-light" href="mailto:piyush.makad16@gmail.com">Email me <Arrow /></a>
@@ -208,7 +211,7 @@ export default function Home() {
       <footer className="site-footer shell">
         <span>© {new Date().getFullYear()} Piyush Makad</span>
         <a href="mailto:piyush.makad16@gmail.com">piyush.makad16@gmail.com</a>
-        <span>Backend engineer · India / Remote</span>
+        <span>Full Stack AI Engineer · India / Remote</span>
       </footer>
     </main>
   );

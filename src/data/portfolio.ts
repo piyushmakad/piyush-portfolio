@@ -6,6 +6,66 @@ export type WorkItem = {
 
 export const featuredWork: WorkItem[] = [
   {
+    slug: "mcp-platform", type: "AI tools · ChatDaddy",
+    title: "A 120-tool MCP platform for real customer operations",
+    summary: "Connected AI clients to messaging, CRM, automation, and commerce with typed tool schemas, team-scoped access, and approval-gated writes.",
+    metric: "120", metricLabel: "production MCP tools",
+    technologies: ["MCP", "TypeScript", "Tool orchestration", "Access control"],
+    context: "ChatDaddy teams needed AI-assisted access to operational capabilities spread across messaging, CRM, automation, and commerce services.",
+    challenge: "Expose useful actions to AI clients without allowing a request to cross team boundaries or silently perform sensitive writes.",
+    approach: [
+      "Defined typed tool contracts for operational actions and connected them to existing backend services.",
+      "Scoped access to the connected team and gated writes on explicit approval.",
+      "Refined tool behavior through human-led evaluations of real requests and failure cases.",
+    ],
+    outcome: "Published a 120-tool MCP platform used as an operational interface for ChatDaddy capabilities.",
+  },
+  {
+    slug: "prompt-to-flow", type: "Full-stack AI · ChatDaddy",
+    title: "Turning a prompt into an editable automation flow",
+    summary: "Built a production React and OpenAI Responses experience that converts natural language into structured automation workflows.",
+    metric: "Live", metricLabel: "customer-facing AI workflow builder",
+    technologies: ["React", "OpenAI Responses", "TypeScript", "Workflow generation"],
+    context: "Customers could describe an automation more easily than they could configure every step manually.",
+    challenge: "Generated steps needed to fit ChatDaddy's workflow structure and remain editable before a customer used them.",
+    approach: [
+      "Designed the prompt and response structure around valid automation steps.",
+      "Built the React interface for reviewing and editing the generated flow.",
+      "Used human-led evaluations to identify wrong or incomplete steps and improve the generation behavior.",
+    ],
+    outcome: "Shipped prompt-to-flow generation to production as an editable customer workflow, with human review before use.",
+  },
+  {
+    slug: "daily-ai-reports", type: "AI analytics · ChatDaddy",
+    title: "Daily AI Reports used by 300+ teams",
+    summary: "Owned analytics comparisons, LLM prompts and fallback, billing, email delivery, and the React experience for a paid report product.",
+    metric: "300+", metricLabel: "teams using paid reports",
+    technologies: ["React", "OpenAI o4-mini", "Analytics", "Billing", "Email"],
+    context: "Teams needed a daily view of what changed in their customer messaging operations without opening an analytics dashboard.",
+    challenge: "Combine saved analytics data into a useful report while keeping generation cost and delivery predictable.",
+    approach: [
+      "Specified the metrics and 24-hour comparisons from existing analytics data.",
+      "Designed prompts and fallback behavior to turn the numbers into a readable email.",
+      "Implemented report generation, billing, email delivery, and the React management UI.",
+    ],
+    outcome: "Shipped a paid report product for 300+ teams at $1 per report, with LLM cost around 10% using OpenAI o4-mini.",
+  },
+  {
+    slug: "backend-doctor", type: "AI-assisted support · ChatDaddy",
+    title: "From Architect Suite to the production Backend Doctor",
+    summary: "Originated an investigation system adopted into a production support tool that correlates Kibana, frontend, and backend evidence.",
+    metric: "10–15 min", metricLabel: "diagnosis, down from 1–2 hours",
+    technologies: ["AI-assisted triage", "Kibana", "Node.js", "Observability"],
+    context: "Support and engineering teams investigated recurring messaging issues across many services while a backlog of 30–40 tickets persisted.",
+    challenge: "Identify root causes across logs and services, then prepare a useful customer response while keeping a person in the approval loop.",
+    approach: [
+      "Created Architect Suite to correlate frontend, backend, and Kibana evidence across 22 services and 257 patterns.",
+      "Produced investigation notes covering symptoms, likely cause, and customer-facing response.",
+      "Used a human approval step before the support workflow advanced; the company adopted the code into its production Backend Doctor.",
+    ],
+    outcome: "AI-assisted diagnosis fell from 1–2 hours to 10–15 minutes, and the ticket backlog fell from 30–40 to 2–3.",
+  },
+  {
     slug: "terabyte-message-storage", type: "Data architecture · ChatDaddy",
     title: "Keeping live messaging fast as storage reached 1 TB",
     summary: "Separated active and historical message access with MongoDB hot and cold partitions and Elasticsearch-backed search.",
@@ -41,14 +101,14 @@ export const featuredWork: WorkItem[] = [
     summary: "Investigated a high-failure retry path and improved message handling, taking decryption failures from 65% to under 1%.",
     metric: "<1%", metricLabel: "retry decryption failures, down from 65%",
     technologies: ["Node.js", "WhatsApp", "Production debugging", "Observability"],
-    context: "ChatDaddy handles more than 200,000 messages daily. Retried WhatsApp channel messages had a separate decryption failure problem that affected recovery after delivery issues.",
+    context: "ChatDaddy handles more than 500,000 messages daily. Retried WhatsApp channel messages had a separate decryption failure problem that affected recovery after delivery issues.",
     challenge: "The fix had to address the retry path without introducing regressions into the broader messaging flow.",
     approach: [
       "Investigated the failure pattern specifically in retried WhatsApp channel messages.",
       "Updated the backend handling for retries and checked the result against production failure rates.",
       "Used operational evidence to separate this failure from unrelated messaging issues.",
     ],
-    outcome: "Reduced decryption failures for retried WhatsApp channel messages from 65% to under 1% on a platform processing 200K+ messages daily.",
+    outcome: "Reduced decryption failures for retried WhatsApp channel messages from 65% to under 1% on a platform processing 500K+ messages daily.",
   },
   {
     slug: "realtime-order-book", type: "Real-time systems · CineStox",
@@ -68,18 +128,19 @@ export const featuredWork: WorkItem[] = [
 ];
 
 export const services = [
-  { title: "Backend architecture", description: "Designing APIs, service boundaries, event flows, and data models for products that need to grow without becoming hard to operate." },
-  { title: "Performance & data", description: "Tracing slow paths, removing redundant work, partitioning large datasets, and using caching and search where they improve real workloads." },
-  { title: "Reliability & operations", description: "Building retry and recovery paths, investigating production incidents, and making failures observable and actionable." },
+  { title: "Full-stack AI products", description: "Building React experiences around LLM workflows, analytics, and automation, with backend integration, billing, and delivery." },
+  { title: "Tool orchestration", description: "Connecting AI clients to real product actions with typed MCP tools, team-scoped access, and approval for sensitive writes." },
+  { title: "Backend systems", description: "Designing event flows and data access for high-volume products, then improving performance, reliability, and incident response." },
 ];
 
 export const skillGroups = [
+  { title: "AI & LLM", skills: ["OpenAI Responses API", "MCP", "Tool orchestration", "Prompt workflows", "Human-led evals", "Claude Code"] },
+  { title: "Frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Real-time UI"] },
   { title: "Backend & APIs", skills: ["Node.js", "TypeScript", "Go", "REST APIs", "WebSockets", "Socket.IO", "Microservices"] },
   { title: "Distributed systems", skills: ["Apache Kafka", "RabbitMQ", "Event-driven architecture", "Transactional outbox", "Worker pools", "Retries", "Idempotency"] },
   { title: "Data & search", skills: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Data partitioning", "Query optimization", "Caching"] },
   { title: "Cloud & operations", skills: ["Docker", "Kubernetes", "Amazon EKS", "AWS", "CI/CD", "GitHub Actions", "Kibana"] },
-  { title: "Languages & tools", skills: ["TypeScript", "JavaScript", "Go", "Python", "Git", "Postman", "Claude Code"] },
-  { title: "Product integration", skills: ["React", "Next.js", "OpenAI API", "MCP", "LLM workflows", "Real-time UI"] },
+  { title: "Languages & tools", skills: ["TypeScript", "JavaScript", "Go", "Python", "Git", "Postman"] },
 ];
 
 export const findWork = (slug: string) => featuredWork.find((item) => item.slug === slug);
