@@ -37,9 +37,9 @@ export const featuredWork: WorkItem[] = [
   },
   {
     slug: "daily-ai-reports", type: "AI analytics · ChatDaddy",
-    title: "Daily AI Reports used by 300+ teams",
+    title: "Daily AI Reports used by 3,000+ teams",
     summary: "Owned analytics comparisons, LLM prompts and fallback, billing, email delivery, and the React experience for a paid report product.",
-    metric: "300+", metricLabel: "teams using paid reports",
+    metric: "3,000+", metricLabel: "teams using paid reports",
     technologies: ["React", "OpenAI o4-mini", "Analytics", "Billing", "Email"],
     context: "Teams needed a daily view of what changed in their customer messaging operations without opening an analytics dashboard.",
     challenge: "Combine saved analytics data into a useful report while keeping generation cost and delivery predictable.",
@@ -48,7 +48,7 @@ export const featuredWork: WorkItem[] = [
       "Designed prompts and fallback behavior to turn the numbers into a readable email.",
       "Implemented report generation, billing, email delivery, and the React management UI.",
     ],
-    outcome: "Shipped a paid report product for 300+ teams at $1 per report, with LLM cost around 10% using OpenAI o4-mini.",
+    outcome: "Shipped a paid report product for 3,000+ teams at $1 per report while keeping OpenAI generation costs below 5% of report revenue using o4-mini.",
   },
   {
     slug: "backend-doctor", type: "AI-assisted support · ChatDaddy",

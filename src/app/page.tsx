@@ -68,12 +68,12 @@ export default function Home() {
       <section className="proof-strip" aria-label="Selected engineering results">
         <div className="shell proof-grid">
           <div><strong>120</strong><span>MCP tools shipped</span></div>
-          <div><strong>300+</strong><span>teams using paid Daily AI Reports</span></div>
+          <div><strong>3,000+</strong><span>teams using paid Daily AI Reports</span></div>
           <div><strong>4M+</strong><span>WhatsApp messages handled daily</span></div>
           <div><strong>2TB+</strong><span>message data partitioned</span></div>
           <div><strong>290K+</strong><span>API operations removed daily</span></div>
           <div><strong>&lt;150ms</strong><span>contact lookup latency</span></div>
-          <div><strong>10K</strong><span>order-book ops/s, MVP estimate</span></div>
+          <div><strong>2,000+</strong><span>teams using AI-powered WhatsApp insights</span></div>
           <div><strong>&lt;1%</strong><span>decryption failures on WhatsApp retries</span></div>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function Home() {
             <article>
               <div className="timeline-meta"><span>2025 — Present</span><span>Remote</span></div>
               <div><h3>Full-Stack Developer</h3><p className="company">ChatDaddy</p></div>
-              <p>Shipped a 120-tool MCP platform, AI prompt-to-flow generation, paid Daily AI Reports, and WhatsApp Business insights. Built React interfaces and model-backed services while optimizing high-volume messaging, data access, and incident response.</p>
+              <p>Shipped a 120-tool MCP platform, AI prompt-to-flow generation, paid Daily AI Reports for 3,000+ teams, and AI-powered WhatsApp Business insights for 2,000+ teams. Built React interfaces and model-backed services while optimizing high-volume messaging, data access, and incident response.</p>
             </article>
             <article>
               <div className="timeline-meta"><span>2024 — 2025</span><span>India</span></div>
