@@ -101,14 +101,14 @@ export const featuredWork: WorkItem[] = [
     summary: "Investigated a high-failure retry path and improved message handling, taking decryption failures from 65% to under 1%.",
     metric: "<1%", metricLabel: "retry decryption failures, down from 65%",
     technologies: ["Node.js", "WhatsApp", "Production debugging", "Observability"],
-    context: "ChatDaddy handles more than 500,000 messages daily. Retried WhatsApp channel messages had a separate decryption failure problem that affected recovery after delivery issues.",
+    context: "ChatDaddy handles 500K+ messages daily across the platform, including 200K+ WhatsApp messages. Retried WhatsApp channel messages had a separate decryption failure problem that affected recovery after delivery issues.",
     challenge: "The fix had to address the retry path without introducing regressions into the broader messaging flow.",
     approach: [
       "Investigated the failure pattern specifically in retried WhatsApp channel messages.",
       "Updated the backend handling for retries and checked the result against production failure rates.",
       "Used operational evidence to separate this failure from unrelated messaging issues.",
     ],
-    outcome: "Reduced decryption failures for retried WhatsApp channel messages from 65% to under 1% on a platform processing 500K+ messages daily.",
+    outcome: "Reduced decryption failures for retried WhatsApp channel messages from 65% to under 1%; WhatsApp accounts for 200K+ of the platform's 500K+ daily messages.",
   },
   {
     slug: "realtime-order-book", type: "Real-time systems · CineStox",
