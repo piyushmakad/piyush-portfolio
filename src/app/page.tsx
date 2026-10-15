@@ -10,7 +10,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Piyush Makad",
-    jobTitle: "Backend & Full-Stack Engineer",
+    jobTitle: "Backend Engineer",
     email: "mailto:piyush.makad16@gmail.com",
     url: "https://portfolio-piyush-steel.vercel.app/",
     sameAs: [
@@ -18,7 +18,7 @@ export default function Home() {
       "https://www.linkedin.com/in/piyush-makad-758834244/",
       "https://www.upwork.com/freelancers/~0130e9a68c27cb6d66",
     ],
-    knowsAbout: ["Node.js", "TypeScript", "Next.js", "PostgreSQL", "Redis", "Kafka", "Elasticsearch", "Distributed systems"],
+    knowsAbout: ["Node.js", "TypeScript", "Go", "PostgreSQL", "MongoDB", "Redis", "Kafka", "RabbitMQ", "Elasticsearch", "Kubernetes", "Distributed systems"],
   };
 
   return (
@@ -51,13 +51,13 @@ export default function Home() {
             priority
           />
           <div className="hero-identity">
-            <p className="hero-name">Piyush Makad<span>Backend &amp; Full-Stack Engineer · India</span></p>
-            <p className="focus-line">Distributed systems <i>·</i> Real-time platforms <i>·</i> Applied AI</p>
+            <p className="hero-name">Piyush Makad<span>Backend Engineer · India / Remote</span></p>
+            <p className="focus-line">Messaging infrastructure <i>·</i> Distributed systems <i>·</i> Data performance</p>
           </div>
         </div>
-        <h1 id="hero-title">I build backend systems that stay <em>fast, reliable</em> and understandable at production scale.</h1>
+        <h1 id="hero-title">I build backend systems that stay <em>fast and reliable</em> as products grow.</h1>
         <div className="hero-bottom">
-          <p className="hero-copy">I take product ideas from rough requirements to working software—across distributed backends, real-time messaging, and practical AI products.</p>
+          <p className="hero-copy">I design APIs, event-driven services, and data access for high-volume products—from customer messaging at ChatDaddy to real-time trading systems at CineStox.</p>
           <div className="hero-actions">
             <a className="button button-dark" href="#work">Explore selected work <Arrow /></a>
             <a className="text-link" href="/Piyush-Makad-Resume.pdf" target="_blank">Download résumé <Arrow /></a>
@@ -68,18 +68,18 @@ export default function Home() {
       <section className="proof-strip" aria-label="Selected engineering results">
         <div className="shell proof-grid">
           <div><strong>1 TB</strong><span>message collection partitioned</span></div>
-          <div><strong>200K+</strong><span>messages processed daily</span></div>
-          <div><strong>10K</strong><span>order-book operations / sec</span></div>
-          <div><strong>&lt;1%</strong><span>message decryption failures</span></div>
-          <div><strong>&lt;150ms</strong><span>contact lookup latency</span></div>
+          <div><strong>290K+</strong><span>API operations removed daily</span></div>
+          <div><strong>5×</strong><span>faster contact lookups</span></div>
+          <div><strong>&lt;1%</strong><span>decryption failures on WhatsApp retries</span></div>
+          <div><strong>200 GB+</strong><span>retained WAL traced in a production outage</span></div>
         </div>
       </section>
 
       <section id="work" className="section shell">
         <div className="section-heading">
           <p className="eyebrow">Career & selected work</p>
-          <h2>Systems I helped ship—and what changed afterward.</h2>
-          <p>Production work and independent products, presented through ownership, engineering decisions and outcomes.</p>
+          <h2>Backend problems I owned in production.</h2>
+          <p>Data scale, API latency, messaging reliability, and real-time systems—explained through decisions and measurable outcomes.</p>
         </div>
         <div className="work-list">
           {featuredWork.map((item, index) => (
@@ -106,23 +106,23 @@ export default function Home() {
         <div className="shell">
           <div className="section-heading light-heading">
             <p className="eyebrow">Experience</p>
-            <h2>Building across the stack, with a bias toward production ownership.</h2>
+            <h2>Owning the backend from design through incidents.</h2>
           </div>
           <div className="timeline">
             <article>
               <div className="timeline-meta"><span>2025 — Present</span><span>Remote</span></div>
               <div><h3>Full-Stack Developer</h3><p className="company">ChatDaddy</p></div>
-              <p>Building WhatsApp Business capabilities, AI analytics and workflow automation. Improved multi-channel reliability and designed hot/cold data access backed by Elasticsearch.</p>
+              <p>Built high-volume messaging services, optimized contact access, and partitioned message data across MongoDB and Elasticsearch. Reduced decryption failures on retried WhatsApp messages and traced a PostgreSQL disk-full outage to an orphaned replication slot retaining over 200 GB of WAL.</p>
             </article>
             <article>
               <div className="timeline-meta"><span>2024 — 2025</span><span>India</span></div>
               <div><h3>Software Development Engineer I</h3><p className="company">CineStox</p></div>
-              <p>Built a real-time Node.js order-book service, introduced distributed Redis caching, and shipped event-driven payment reconciliation.</p>
+              <p>Built a Kafka and Socket.IO order-book MVP, introduced Redis caching that reduced database load by 40%, and shipped payment and notification services.</p>
             </article>
             <article>
               <div className="timeline-meta"><span>2020 — 2024</span><span>Jaipur</span></div>
               <div><h3>B.Tech, Computer Science</h3><p className="company">SKIT Jaipur · 8.90 CGPA</p></div>
-              <p>Specialized in artificial intelligence while building a strong foundation in software engineering and competitive programming.</p>
+              <p>Built a foundation in software engineering, algorithms, databases, and system design.</p>
             </article>
           </div>
         </div>
@@ -130,16 +130,16 @@ export default function Home() {
 
       <section className="section shell product-lab" aria-labelledby="lab-title">
         <div className="section-heading">
-          <p className="eyebrow">Building independently</p>
-          <h2 id="lab-title">Products built to learn the whole system.</h2>
-          <p>My independent work is where I explore AI interfaces, retrieval, voice agents and product delivery end to end.</p>
+          <p className="eyebrow">Independent engineering</p>
+          <h2 id="lab-title">Building the failure paths, not just the happy path.</h2>
+          <p>PulseFlow is my public Go systems project. Smaller product builds show how I connect backend services to usable interfaces.</p>
         </div>
         <div className="lab-grid">
-          <a href="https://prep-time.vercel.app/" target="_blank" rel="noreferrer" className="lab-card lab-primary">
-            <div><span className="lab-index">01</span><span className="live-pill">Live</span></div>
-            <h3>PrepTime</h3>
-            <p>Role-aware voice interviews with structured, criteria-based feedback.</p>
-            <span className="lab-link">Open product <Arrow /></span>
+          <a href="https://github.com/piyushmakad/Pulseflow" target="_blank" rel="noreferrer" className="lab-card lab-primary">
+            <div><span className="lab-index">01</span><span className="wip-pill">Building</span></div>
+            <h3>PulseFlow</h3>
+            <p>Multi-tenant event ingestion and notification delivery in Go, with a PostgreSQL outbox, Kafka, idempotency, bounded workers, and durable retries.</p>
+            <span className="lab-link">View repository <Arrow /></span>
           </a>
           <a href="https://ai-github-app.onrender.com/" target="_blank" rel="noreferrer" className="lab-card">
             <div><span className="lab-index">02</span><span className="live-pill">Live</span></div>
@@ -147,11 +147,11 @@ export default function Home() {
             <p>Repository summaries, semantic code search and meeting transcription in one developer workspace.</p>
             <span className="lab-link">Open product <Arrow /></span>
           </a>
-          <a href="https://github.com/piyushmakad/Pulseflow" target="_blank" rel="noreferrer" className="lab-card">
-            <div><span className="lab-index">03</span><span className="wip-pill">Building</span></div>
-            <h3>PulseFlow</h3>
-            <p>A backend-first system written in Go, designed around explicit boundaries and durable infrastructure.</p>
-            <span className="lab-link">View repository <Arrow /></span>
+          <a href="https://prep-time.vercel.app/" target="_blank" rel="noreferrer" className="lab-card">
+            <div><span className="lab-index">03</span><span className="live-pill">Live</span></div>
+            <h3>PrepTime</h3>
+            <p>Voice interview practice with role-aware conversations and structured feedback.</p>
+            <span className="lab-link">Open product <Arrow /></span>
           </a>
         </div>
       </section>
@@ -161,8 +161,8 @@ export default function Home() {
       <section id="services" className="section shell services-layout">
         <div className="section-heading sticky-heading">
           <p className="eyebrow">How I can help</p>
-          <h2>From fuzzy problem to production.</h2>
-          <p>Focused engagements for product teams, founders, and engineering organizations.</p>
+          <h2>Backend engineering for real product constraints.</h2>
+          <p>Architecture, performance, and reliability for teams operating systems that customers depend on.</p>
         </div>
         <div className="service-list">
           {services.map((service, index) => (
@@ -175,9 +175,9 @@ export default function Home() {
         <div className="skills-heading">
           <div>
             <p className="eyebrow">Technical toolkit</p>
-            <h2 id="stack-title">A full-stack toolkit, organized by where it creates value.</h2>
+            <h2 id="stack-title">The tools behind the systems.</h2>
           </div>
-          <p>I go deepest in TypeScript, Node.js, databases, messaging and production backend systems. The wider toolkit helps me own features end to end.</p>
+          <p>I go deepest in Node.js, TypeScript, Go, messaging systems, databases, and production debugging. React and AI integrations help me carry backend work into the product.</p>
         </div>
         <div className="skills-grid">
           {skillGroups.map((group, index) => (
@@ -194,7 +194,7 @@ export default function Home() {
           <p className="eyebrow">Let&apos;s build something</p>
           <div>
             <h2>Have a hard engineering problem?</h2>
-            <p className="contact-copy">I&apos;m open to full-time backend or full-stack roles and selected freelance product engagements.</p>
+            <p className="contact-copy">I&apos;m open to backend and platform engineering roles, especially teams working on distributed systems, high-volume APIs, and data-intensive products.</p>
           </div>
           <div className="contact-actions">
             <a className="button button-light" href="mailto:piyush.makad16@gmail.com">Email me <Arrow /></a>
@@ -208,7 +208,7 @@ export default function Home() {
       <footer className="site-footer shell">
         <span>© {new Date().getFullYear()} Piyush Makad</span>
         <a href="mailto:piyush.makad16@gmail.com">piyush.makad16@gmail.com</a>
-        <span>Full-stack engineer · India / Remote</span>
+        <span>Backend engineer · India / Remote</span>
       </footer>
     </main>
   );

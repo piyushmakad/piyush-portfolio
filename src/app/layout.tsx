@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "Piyush Makad — Backend, Full-Stack & Distributed Systems Engineer", template: "%s — Piyush Makad" },
-  description: "Full-stack engineer building reliable messaging platforms, high-throughput backend systems, and practical AI products at production scale.",
-  openGraph: { title: "Piyush Makad — Backend & Full-Stack Engineer", description: "Reliable messaging, high-throughput backend systems, and practical AI products.", type: "website" },
+  title: { default: "Piyush Makad — Backend Engineer | Distributed Systems", template: "%s — Piyush Makad" },
+  description: "Backend engineer building reliable messaging infrastructure, event-driven services, and fast data access at production scale.",
+  openGraph: { title: "Piyush Makad — Backend Engineer", description: "Messaging infrastructure, event-driven systems, and production reliability.", type: "website" },
   twitter: { card: "summary_large_image" },
 };
 
