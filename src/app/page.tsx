@@ -69,8 +69,8 @@ export default function Home() {
         <div className="shell proof-grid">
           <div><strong>120</strong><span>MCP tools shipped</span></div>
           <div><strong>300+</strong><span>teams using paid Daily AI Reports</span></div>
-          <div><strong>500K+</strong><span>messages processed daily across the platform</span></div>
-          <div><strong>1 TB</strong><span>message collection partitioned</span></div>
+          <div><strong>4M+</strong><span>WhatsApp messages handled daily</span></div>
+          <div><strong>2TB+</strong><span>message data partitioned</span></div>
           <div><strong>290K+</strong><span>API operations removed daily</span></div>
           <div><strong>&lt;150ms</strong><span>contact lookup latency</span></div>
           <div><strong>10K</strong><span>order-book ops/s, MVP estimate</span></div>
